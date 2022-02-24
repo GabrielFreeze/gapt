@@ -1,0 +1,25 @@
+Download Data -> Data Exploration and Visualisation -> Justified Cleaning and Imputation of Data
+
+Notes:
+
+•SibSp = Number of Siblings/Spouse
+•Parch = Number of Parents/Children
+
+•Possible Feature: IsAlone
+
+•Embarked is usually imputated with the mode.
+
+•There are many approaches of handling the Cabin feature. 70%+ of the data is missing.
+
+•Age must also be imputated.
+
+•The Higher a Tourist paid, the higher the chances of survival.
+
+• Encode Strings/Objects into numerical values. (eg. male = 0, female = 1)
+
+
+
+• https://www.kaggle.com/javigallego/hyperparameter-tuning-ensemble-modeling
+• https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8
+• https://towardsdatascience.com/a-beginners-guide-to-kaggle-s-titanic-problem-3193cb56f6ca
+
