@@ -1,5 +1,26 @@
 Download Data -> Data Exploration and Visualisation -> Justified Cleaning and Imputation of Data
 
+train = pd.read_csv(...)
+
+#Understand the data
+train.info()
+train.describe()
+
+#Plot histograms (numerical data) and frequency charts (categorical data).
+#Investigate unusal distributions
+
+#Histogram for all numerical values
+for i in df_num.columns:
+  plt.hist(df_num[i])
+  plt.title(i)
+  plt.show()
+
+#Correlations
+print(df_num.corr())
+sns.heatmap(df_num.corr())
+
+
+
 Notes:
 
 •SibSp = Number of Siblings/Spouse
@@ -15,11 +36,15 @@ Notes:
 
 •The Higher a Tourist paid, the higher the chances of survival.
 
-• Encode Strings/Objects into numerical values. (eg. male = 0, female = 1)
+•Encode Strings/Objects into numerical values. (eg. male = 0, female = 1)
+
+•Explore interesting themes: (Wealthy Survive?, By Location, Age Scatterplot with ticket price, Total spent) 
 
 
 
 • https://www.kaggle.com/javigallego/hyperparameter-tuning-ensemble-modeling
 • https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8
 • https://towardsdatascience.com/a-beginners-guide-to-kaggle-s-titanic-problem-3193cb56f6ca
+• Most common algorithms: https://www.kaggle.com/c/titanic/discussion/305960
+• https://www.youtube.com/watch?v=I3FBJdiExcg - https://www.kaggle.com/kenjee/titanic-project-example
 
