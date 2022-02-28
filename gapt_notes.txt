@@ -20,8 +20,32 @@ print(df_num.corr())
 sns.heatmap(df_num.corr())
 
 
-
 Notes:
+
+• K-Fold Cross Validation to compare and evaluate different models. Evaluate different models.
+
+•Label encoder converts non-numerical features to a numerical type.
+ Models can only learn from numerical values.
+
+	non_numerical_cols =  [col for col in df_data.columns if df_data[col].dtype == 'object']
+
+	for f in non_numerical_cols:
+	   df[f] = LabelEncoder().fit_transform(df[f])
+
+
+
+•Ordinal Variables -> Finite set of Discrete Values have an ordering. eg. (Num of Apples: [Five,Four,...]. Five > Four even though they are strings)
+
+•Nomimal Variables ->  Finite set of Discrete Values with no relationship between values. eg. (Village: [Xaghra, Nadur]. No ordering between values)
+
+•Ordinal Encoding -> A unique category is assigned an integer value. Used for Ordinal Variables.
+
+•One-Hot Encoding -> All possible unique categories are added to the dataframe. The category describing the record is 1 and the others are 0.
+
+•Dummy Variable Encoding -> One-Hot encoding creates 1 binary value for each category. However knowing the value for n-1 categories, we can infer the value for the nth category.  eg. Categories:[red,green,blue]. If a record has red=0 and green=0, we know that the record is blue. Hence given n unique categories, we only need to add n-1 categories to the dataframe.
+
+
+•Binning -> Discretising continous values based on distribution
 
 •SibSp = Number of Siblings/Spouse
 •Parch = Number of Parents/Children
@@ -34,11 +58,21 @@ Notes:
 
 •Age must also be imputated.
 
+•Consider the salutation
+
 •The Higher a Tourist paid, the higher the chances of survival.
 
 •Encode Strings/Objects into numerical values. (eg. male = 0, female = 1)
 
 •Explore interesting themes: (Wealthy Survive?, By Location, Age Scatterplot with ticket price, Total spent) 
+
+
+Intersting Machine Learning Algorithms:
+
+• XGBoost - performance
+• kNN - easy to implement
+• SVM
+
 
 
 
@@ -47,4 +81,5 @@ Notes:
 • https://towardsdatascience.com/a-beginners-guide-to-kaggle-s-titanic-problem-3193cb56f6ca
 • Most common algorithms: https://www.kaggle.com/c/titanic/discussion/305960
 • https://www.youtube.com/watch?v=I3FBJdiExcg - https://www.kaggle.com/kenjee/titanic-project-example
-
+• https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/
+• https://machinelearningmastery.com/k-fold-cross-validation/
