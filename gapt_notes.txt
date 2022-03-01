@@ -1,5 +1,26 @@
 Download Data -> Data Exploration and Visualisation -> Justified Cleaning and Imputation of Data
 
+Questions:
+We are planning to clean the data based on common techniques used in other submissions. Training models appears to simply involve calling a function from a python library. As a result I think the general course of action would be to first explore and visualise the dataset. Then have 2 or 3 different variations of the dataframe after cleaning and imputation, following justified reasons. Then perform around 5 different models each trained on the altered dataframes. Hence at the end we have a lot of material to compare and can heavily evaluate the different models and datafranes. THOUGHTS?
+
+Do you think it is a good approach to have multiple variations of the dataframe or should we stick to one.
+
+Does talking about the data exploration and machine learning algorithms that we plan to apply account for the literature review?
+
+What do you think about using pre-built libraries to train models as opposed to generating somple algorithms like kNN ourselves.
+
+I planned on using python and presenting the code on Jupyter Notebook. That way I can annotate and describe the algorithms I am preforming. THOUGHTS?
+
+Have you ever tried this competition -> In your experience what do you think is a good technique/algorithm that we should apply.
+
+Plausible algorithms:
+-> A simple one like kNN or linear regression
+-> One that has a reputation to perform well like XGBoost
+-> SVM, Naive Bayes, Decision Trees
+
+
+
+
 train = pd.read_csv(...)
 
 #Understand the data
@@ -72,9 +93,6 @@ Intersting Machine Learning Algorithms:
 • XGBoost - performance
 • kNN - easy to implement
 • SVM
-
-
-
 
 • https://www.kaggle.com/javigallego/hyperparameter-tuning-ensemble-modeling
 • https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8
