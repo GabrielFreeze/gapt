@@ -1,26 +1,5 @@
 Download Data -> Data Exploration and Visualisation -> Justified Cleaning and Imputation of Data
 
-Questions:
-We are planning to clean the data based on common techniques used in other submissions. Training models appears to simply involve calling a function from a python library. As a result I think the general course of action would be to first explore and visualise the dataset. Then have 2 or 3 different variations of the dataframe after cleaning and imputation, following justified reasons. Then perform around 5 different models each trained on the altered dataframes. Hence at the end we have a lot of material to compare and can heavily evaluate the different models and datafranes. THOUGHTS?
-
-Do you think it is a good approach to have multiple variations of the dataframe or should we stick to one.
-
-Does talking about the data exploration and machine learning algorithms that we plan to apply account for the literature review?
-
-What do you think about using pre-built libraries to train models as opposed to generating somple algorithms like kNN ourselves.
-
-I planned on using python and presenting the code on Jupyter Notebook. That way I can annotate and describe the algorithms I am preforming. THOUGHTS?
-
-Have you ever tried this competition -> In your experience what do you think is a good technique/algorithm that we should apply.
-
-Plausible algorithms:
--> A simple one like kNN or linear regression
--> One that has a reputation to perform well like XGBoost
--> SVM, Naive Bayes, Decision Trees
-
-
-
-
 train = pd.read_csv(...)
 
 #Understand the data
@@ -41,32 +20,18 @@ print(df_num.corr())
 sns.heatmap(df_num.corr())
 
 
+Types of Seaborn Graphs:
+• Distplots (Histograms + automatically calculates appropriate bin sizes)
+• JointPlots
+• KDE Plot (Smoothed histogram using a continous probability density curve)
+• PairPlot (Viewing Correlations; hue=Seperate by Categorical data)
+• BarPlot (Categorical x Numerical)
+• CountPlot (Counts number of records belonging to a specific category)
+• BoxPlot
+• JitterPlot (Categorical x Numerical)
+• Pivot Table (Counts the number of records between 2 categories. Can be visualised using a heatmap)
+• PairGrid (Visualise correlations/Clusters between 2 numerical variables, for categorical value)
 Notes:
-
-• K-Fold Cross Validation to compare and evaluate different models. Evaluate different models.
-
-•Label encoder converts non-numerical features to a numerical type.
- Models can only learn from numerical values.
-
-	non_numerical_cols =  [col for col in df_data.columns if df_data[col].dtype == 'object']
-
-	for f in non_numerical_cols:
-	   df[f] = LabelEncoder().fit_transform(df[f])
-
-
-
-•Ordinal Variables -> Finite set of Discrete Values have an ordering. eg. (Num of Apples: [Five,Four,...]. Five > Four even though they are strings)
-
-•Nomimal Variables ->  Finite set of Discrete Values with no relationship between values. eg. (Village: [Xaghra, Nadur]. No ordering between values)
-
-•Ordinal Encoding -> A unique category is assigned an integer value. Used for Ordinal Variables.
-
-•One-Hot Encoding -> All possible unique categories are added to the dataframe. The category describing the record is 1 and the others are 0.
-
-•Dummy Variable Encoding -> One-Hot encoding creates 1 binary value for each category. However knowing the value for n-1 categories, we can infer the value for the nth category.  eg. Categories:[red,green,blue]. If a record has red=0 and green=0, we know that the record is blue. Hence given n unique categories, we only need to add n-1 categories to the dataframe.
-
-
-•Binning -> Discretising continous values based on distribution
 
 •SibSp = Number of Siblings/Spouse
 •Parch = Number of Parents/Children
@@ -79,8 +44,6 @@ Notes:
 
 •Age must also be imputated.
 
-•Consider the salutation
-
 •The Higher a Tourist paid, the higher the chances of survival.
 
 •Encode Strings/Objects into numerical values. (eg. male = 0, female = 1)
@@ -88,16 +51,18 @@ Notes:
 •Explore interesting themes: (Wealthy Survive?, By Location, Age Scatterplot with ticket price, Total spent) 
 
 
-Intersting Machine Learning Algorithms:
 
-• XGBoost - performance
-• kNN - easy to implement
-• SVM
+
+• Create Deck Column from first letter of Cabin -> View survival rate per Deck
+
+• Check survival rate with respect to SibSp and Parch
+• Check salutation
+
+
 
 • https://www.kaggle.com/javigallego/hyperparameter-tuning-ensemble-modeling
 • https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8
 • https://towardsdatascience.com/a-beginners-guide-to-kaggle-s-titanic-problem-3193cb56f6ca
 • Most common algorithms: https://www.kaggle.com/c/titanic/discussion/305960
 • https://www.youtube.com/watch?v=I3FBJdiExcg - https://www.kaggle.com/kenjee/titanic-project-example
-• https://machinelearningmastery.com/one-hot-encoding-for-categorical-data/
-• https://machinelearningmastery.com/k-fold-cross-validation/
+
