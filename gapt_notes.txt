@@ -31,6 +31,7 @@ Types of Seaborn Graphs:
 • JitterPlot (Categorical x Numerical)
 • Pivot Table (Counts the number of records between 2 categories. Can be visualised using a heatmap)
 • PairGrid (Visualise correlations/Clusters between 2 numerical variables, for categorical value)
+All plots: https://seaborn.pydata.org/examples/pointplot_anova.html
 Notes:
 
 •SibSp = Number of Siblings/Spouse
@@ -57,7 +58,7 @@ Notes:
 
 • Check survival rate with respect to SibSp and Parch
 • Check salutation
-
+• remove SibSp and Parch, replace with Family. They are fairly correlated. "highly..."
 
 
 • https://www.kaggle.com/javigallego/hyperparameter-tuning-ensemble-modeling
