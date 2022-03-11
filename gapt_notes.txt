@@ -54,6 +54,14 @@ Notes:
 
 
 
+Questions:
+•Inthom kontu ħa tneħħu il-Cabin feature?
+
+
+
+
+
+
 • Create Deck Column from first letter of Cabin -> View survival rate per Deck
 
 • Check survival rate with respect to SibSp and Parch
