@@ -1,5 +1,4 @@
 import os
-from sklearn.model_selection import train_test_split
 import pandas as pd
 
 read_path = os.path.join(os.getcwd(),'data')
@@ -8,7 +7,6 @@ write_path = os.path.join(os.getcwd(),'data')
 #Original datset received from https://www.kaggle.com/datasets/vinicius150987/titanic3
 filename = 'titanic_original.csv'
 df = pd.read_csv(os.path.join(read_path,filename))
-
 
 #Rename columns
 df.columns = ['Pclass','Survived','Name','Sex','Age','SibSp','Parch',
