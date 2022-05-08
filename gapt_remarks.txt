@@ -1,6 +1,0 @@
-Fare x Pclass. Fare is already encoded in Pclass because of correlations.
-
-Reiterate changes
-
-Fare_category is binned inacurately.
-
