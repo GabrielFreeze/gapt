@@ -1,0 +1,16 @@
+Dataset,Model,Accuracy
+1,Random Forest,0.69856
+1,SVM,0.76555
+1,Naive Bayes,0.75358
+1,Decision Tree,0.67703
+1,Logistic Regression,0.76076
+2,Random Forest,0.69856
+2,SVM,0.77272
+2,Naive Bayes,0.75119
+2,Decision Tree,0.69856
+2,Logistic Regression,0.76315
+3,Random Forest,0.74162
+3,SVM,0.76555
+3,Naive Bayes,0.75358
+3,Decision Tree,0.72727
+3,Logistic Regression,0.75837
