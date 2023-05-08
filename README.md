@@ -14,7 +14,7 @@ The sinking of the Titanic is one of the most infamous shipwrecks in history. On
 </p>
 
 ## Install on your computer
-<ul>
+<ol>
   <li>Clone Repository</li>
   <li>cd gapt/</li>
   <li>conda create --name gapt-venv --file requirements.txt</li>
@@ -22,4 +22,4 @@ The sinking of the Titanic is one of the most infamous shipwrecks in history. On
   <li>conda install -c anaconda ipykernel</li>
   <li>python -m ipykernel install --user --name=gapt-venv</li>
   <li>jupyter notebook</li>
-</ul> 
+</ol> 
