@@ -23,3 +23,6 @@ The sinking of the Titanic is one of the most infamous shipwrecks in history. On
   <li>python -m ipykernel install --user --name=gapt-venv</li>
   <li>jupyter notebook</li>
 </ol> 
+
+## Warning
+This project is no longer maintained and may be vulnerable to known security flaws. Run and deploy at your own risk.
